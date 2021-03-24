@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="{{ '/static/styles/header.css' | url }}">
+
+<header>
+    <a href="/" class="a--title {% if page.url == '/' %} a--active a--title-active {% endif %}">
+        {{ metadata.title }}
+    </a>
+    <nav aria-label="Разделы сайта">
+        {%- for entry in collections.all | eleventyNavigation -%}
+            {%- if entry.key != "home" -%}
+                <a href="{{ entry.url }}" class="{%- if entry.key == eleventyNavigation.parent -%} a--partial-active {%- endif -%} {%- if entry.url == page.url -%} a--active {%- endif -%}" {%- if entry.url == page.url -%} tabindex="-1" {%- endif -%}>{{ entry.title }}</a>
+            {%- endif -%}
+        {%- endfor -%}
+        <a href="#contacts">Контакты</a>
+    </nav>
+</header>

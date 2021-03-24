@@ -1,0 +1,62 @@
+{
+  "scripts": {
+    "start": "cross-env NODE_ENV=development eleventy --serve",
+    "debug": "set DEBUG=* & eleventy",
+    "build": "npm run lint && cross-env NODE_ENV=production eleventy",
+    "lint": "stylelint src/static/styles/*.scss --fix"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "cross-env": "^7.0.2",
+    "eleventy-plugin-pwa": "^1.0.8",
+    "eleventy-plugin-sass": "^1.2.0",
+    "html-minifier": "^4.0.0",
+    "js-yaml": "^3.14.0",
+    "luxon": "^1.25.0",
+    "sharp": "^0.27.2",
+    "stylelint": "^13.12.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-order": "^4.1.0"
+  },
+  "stylelint": {
+    "plugins": [
+      "stylelint-order"
+    ],
+    "extends": [
+      "stylelint-config-rational-order"
+    ],
+    "rules": {
+      "plugin/rational-order": [
+        true,
+        {
+          "empty-line-between-groups": true
+        }
+      ],
+      "color-named": "never",
+      "order/order": [
+        "declarations",
+        {
+          "type": "at-rule",
+          "name": "media"
+        },
+        {
+          "type": "rule",
+          "selector": "^&::(before|after)"
+        },
+        {
+          "type": "rule",
+          "selector": "^&:\\w"
+        },
+        {
+          "type": "rule",
+          "selector": "^&_"
+        },
+        {
+          "type": "rule",
+          "selector": "^."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@import "fonts.scss";
+
+:root {
+  --background: #130d28;
+  --foreground: #ffffff;
+  --foreground-light: #ffffff80;
+  --foreground-extra-light: #ffffff20;
+  --accent: #ffd76f;
+  --accent-light: #ffd76f80;
+}
+
+html {
+  font-size: 24px;
+  font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1312px;
+  margin: 0 auto;
+  padding: 1rem 1rem 2rem 1rem;
+
+  color: var(--foreground);
+
+  background-color: var(--background);
+}
+
+* {
+  font-weight: 500;
+}
+
+h1 {
+  margin: 0 0 1rem -2px;
+
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0;
+
+  font-size: 1.5rem;
+}
+
+article.project > p,
+img {
+  margin: 1rem 0 0 0;
+}
+
+p {
+  margin: 0;
+
+  line-height: 1.25;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  transition-timing-function: cubic-bezier(0.18, 0.45, 0.35, 0.99);
+  transition-duration: 0.38s;
+  transition-property: color;
+
+  &:hover,
+  &:focus {
+    color: var(--foreground-light);
+
+    transition: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+
+  border-radius: 0.5rem;
+}
+
+hr {
+  height: 1px;
+
+  background-color: var(--foreground-extra-light);
+  border: none;
+}
+
+ul {
+  margin: 1rem 0 0 0;
+  padding-left: 0;
+
+  li {
+    list-style-type: none;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    a:first-child {
+      text-transform: uppercase;
+    }
+  }
+}
+
+span.info {
+  display: block;
+
+  font-size: 0.75rem;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 16px;
+  }
+}

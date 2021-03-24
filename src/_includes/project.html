@@ -1,0 +1,19 @@
+---
+layout: default
+eleventyNavigation:
+  key: project
+  parent: projects
+---
+
+<link rel="stylesheet" href="{{ '/static/styles/project.css' | url }}">
+
+<h1>{{title}}</h1>
+<span class="info">
+    <time datetime="{{ date }}"> {{ date | getYear }}</time> • 
+    {{ period }} работы •
+    для
+    <a href="/partners/{{ partner | slug }}">{{ partner }}</a>
+</span>
+<article class="text">
+  {{ content | safe }}
+</article>

@@ -1,0 +1,18 @@
+<section class="projects">
+  {%- for project in collections.project | reverse -%}
+  <article class="project">
+    <section class="title">
+      <a href="{{ project.url | url }}"><h2>{{ project.data.title }}</h2></a>
+      <span class="info"
+        ><time datetime="{{ project.data.date }}"
+          >{{ project.data.date | getYear }}</time
+        > • {{ project.data.period }} работы • для
+        <a href="/partners/{{ project.data.partner | slug }}"
+          >{{ project.data.partner }}</a
+        >
+      </span>
+    </section>
+    {{ project.templateContent | safe }}
+  </article>
+  {%- endfor -%}
+</section>

@@ -1,0 +1,61 @@
+header {
+  margin-bottom: 2rem;
+
+  text-transform: uppercase;
+
+  a {
+    line-height: 1;
+
+    &.a--title {
+      &-active {
+        font-size: 2rem;
+      }
+    }
+
+    &.a--active {
+      pointer-events: none;
+    }
+  }
+
+  nav a {
+    &:not(:first-child) {
+      margin-left: 0.5rem;
+    }
+
+    &.a--active {
+      color: var(--accent-light);
+    }
+
+    &.a--partial-active {
+      color: var(--accent);
+
+      &:hover, &:focus {
+        color: var(--accent-light);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  header {
+    a,
+    nav {
+      display: inline-block;
+    }
+
+    nav {
+      float: right;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    & > a {
+      display: block;
+    }
+    a.a--title {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

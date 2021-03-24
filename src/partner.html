@@ -1,0 +1,32 @@
+---
+pagination:
+  data: collections.partnersList
+  size: 1
+  alias: partner
+  addAllPagesToCollections: true
+layout: default
+renderData:
+  description: "{{ partner }}"
+  title: "{{ partner }}"
+eleventyNavigation:
+  key: partner
+  parent: partners
+permalink: /partners/{{ partner | slug }}/
+---
+
+<h1>
+  {{ partner }}
+</h1>
+<section>
+  {% set projectslist = collections.project %}
+  <ul>
+  {%- for project in projectslist -%}
+    {%- if project.data.partner == partner -%}
+      <li><a href={{ project.url | url }}>{{ project.data.title }}</a><span class="info">
+        <time datetime="{{ project.date }}">{{ project.date | getYear }}</time>
+        • {{ project.data.period }} работы
+      </span></li>
+    {%- endif -%}
+  {%- endfor -%}
+  </ul>
+</section>

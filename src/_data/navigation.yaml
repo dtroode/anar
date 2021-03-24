@@ -1,0 +1,6 @@
+---
+items:
+  - title: Главная
+    url: "/"
+  - title: Проекты
+    url: "/projects"

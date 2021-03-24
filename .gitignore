@@ -1,0 +1,8 @@
+_site/
+.DS_Store
+node_modules/
+.vscode/
+_site/
+*git/
+package-lock.json
+.env

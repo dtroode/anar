@@ -1,0 +1,33 @@
+footer {
+  margin-top: 3rem;
+  
+  nav a {
+    font-size: 1.5rem;
+    line-height: 1.15;
+  }
+
+  p {
+    margin-top: 0;
+
+    color: var(--foreground-light);
+    font-size: 0.75rem;
+
+    a:hover, a:focus {
+      color: var(--foreground-extra-light);
+    }
+  }
+  
+  hr {
+    margin: 0.25rem 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  span.bullet {
+    display: none;
+  }
+
+  footer nav a {
+    display: block;
+  }
+}

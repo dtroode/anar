@@ -1,0 +1,54 @@
+backend:
+  name: proxy
+  proxy_url: http://localhost:8081/api/v1
+  branch: master
+  ### enable below lines for github integration ###
+  # name: github
+  # repo: surjithctly/neat-starter
+media_folder: "src/static/images"
+public_folder: "/static/images"
+
+locale: 'ru'
+
+# Please run "npx netlify-cms-proxy-server" for local backend
+local_backend: true
+collections:
+  - label: "Проекты"
+    name: "projects"
+    folder: "src/projects"
+    create: true
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Описание", name: "description", widget: "string" }
+      - { label: "Заглавная картинка", name: "image", widget: "image"}
+      - { label: "Партнёр", name: "partner", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Сроки", name: "period", widget: "string"}
+      - { label: "Текст", name: "body", widget: "markdown" }
+  - label: "Настройки"
+    name: "settings"
+    editor:
+      preview: false
+    files:
+      - label: "Navigation"
+        name: "items"
+        file: "src/_data/navigation.yaml"
+        fields:
+          - label: Nav Items
+            name: items
+            widget: list
+            allow_add: false
+            collapsed: false
+            fields:
+              - { label: Title, name: text, widget: string }
+              - { label: URL, name: url, widget: string }
+      - label: "Meta"
+        name: "metadata"
+        file: "src/_data/metadata.yaml"
+        fields:
+          - { label: Заголовок, name: title, widget: string }
+          - { label: Описание, name: description, widget: string }
+          - { label: URL, name: url, widget: string }
+          - { label: Почта, name: mail, widget: string }
+          - { label: Разработчик, name: developer, widget: string }
+          - { label: Превью, name: image, widget: string }

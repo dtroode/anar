@@ -1,0 +1,16 @@
+---
+layout: default
+title: Партнёры
+description: Партнёры
+permalink: /partners/index.html
+eleventyNavigation:
+  key: partners
+  title: Партнёры
+---
+
+<h1>Партнёры</h1>
+<ul>
+  {%- for partner in collections.partnersList -%}
+    <li><a href="{{ partner | slug | url }}">{{ partner }}</a></li>
+  {%- endfor -%}
+</ul>

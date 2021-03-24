@@ -1,0 +1,23 @@
+---
+layout: default
+title: Проекты
+eleventyNavigation:
+  key: projects
+  title: Проекты
+---
+
+<h1>Проекты</h1>
+<section>
+  {% set projectslist = collections.project %}
+  <ul>
+    {%- for project in projectslist | reverse -%}
+    <li>
+      <a href="{{ project.url | url}}">{{ project.data.title }}</a>
+      <span class="info">
+        <time datetime="{{ project.date }}">{{ project.date | getYear }}</time> • 
+        {{ project.data.period }} работы • для <a href="/partners/{{ project.data.partner | slug }}">{{ project.data.partner }}</a>
+      </span>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
