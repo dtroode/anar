@@ -2,6 +2,8 @@ backend:
   name: github
   repo: dtroode/anar
   branch: master
+  base_url: https://anar-dtroode.vercel.app
+  auth_endpoint: api/auth
 media_folder: "src/static/images"
 public_folder: "/static/images"
 
