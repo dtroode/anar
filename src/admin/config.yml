@@ -3,15 +3,11 @@ backend:
   repo: dtroode/anar
   branch: master
   base_url: https://anar-dtroode.vercel.app
-  ### enable below lines for github integration ###
-  # name: github
-  # repo: surjithctly/neat-starter
 media_folder: "src/static/images"
 public_folder: "/static/images"
 
 locale: 'ru'
 
-# Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
 collections:
   - label: "Проекты"
