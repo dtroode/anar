@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
-Sitemap: https://example.com/sitemap.xml
-Host: https://example.com
+Sitemap: https://anar-dtroode.vercel.app/sitemap.xml
+Host: https://anar-dtroode.vercel.app

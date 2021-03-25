@@ -1,7 +1,8 @@
 backend:
-  name: proxy
-  proxy_url: http://localhost:8081/api/v1
+  name: [ github | gitlab ]
+  repo: dtroode/anar
   branch: master
+  base_url: https://anar-dtroode.vercel.app
   ### enable below lines for github integration ###
   # name: github
   # repo: surjithctly/neat-starter
