@@ -1,9 +1,21 @@
 {
+  "name": "anar",
+  "version": "1.0.0",
+  "description": "Some text for description",
   "scripts": {
     "start": "cross-env NODE_ENV=development eleventy --serve",
     "debug": "set DEBUG=* & eleventy",
     "build": "npm run lint && cross-env NODE_ENV=production eleventy",
     "lint": "stylelint src/static/styles/*.scss --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dtroode/anar.git"
+  },
+  "author": {
+    "name": "Давид Кистаури",
+    "email": "davidkis113@gmail.com",
+    "url": "https://dtroode.vercel.app/"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
@@ -17,7 +29,8 @@
     "sharp": "^0.27.2",
     "stylelint": "^13.12.0",
     "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-order": "^4.1.0"
+    "stylelint-order": "^4.1.0",
+    "@openlab/vercel-netlify-cms-github": "^1.0.0"
   },
   "stylelint": {
     "plugins": [
@@ -58,8 +71,5 @@
         }
       ]
     }
-  },
-  "dependencies": {
-    "@openlab/vercel-netlify-cms-github": "^1.0.0"
   }
 }
