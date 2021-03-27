@@ -104,8 +104,14 @@ ul {
       margin-bottom: 0.5rem;
     }
 
-    a:first-child {
+    & > a {
+      display: block;
       text-transform: uppercase;
+      line-height: 1;
+    }
+
+    & > span {
+      margin-top: 0.125rem;
     }
   }
 }
