@@ -20,6 +20,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-navigation": "^0.1.6",
+    "@openlab/vercel-netlify-cms-github": "^1.0.0",
     "cross-env": "^7.0.2",
     "eleventy-plugin-pwa": "^1.0.8",
     "eleventy-plugin-sass": "^1.2.0",
@@ -29,8 +30,7 @@
     "sharp": "^0.27.2",
     "stylelint": "^13.12.0",
     "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-order": "^4.1.0",
-    "@openlab/vercel-netlify-cms-github": "^1.0.0"
+    "stylelint-order": "^4.1.0"
   },
   "stylelint": {
     "plugins": [
