@@ -4,38 +4,47 @@ title: АНАР
 eleventyNavigation:
   key: home
   title: Главная
+  order: 1
 ---
 
-<link rel="stylesheet" href="{{ '/static/styles/index.css' | url }}">
-<link rel="stylesheet" href="{{ '/static/styles/projects-list.css' | url }}">
+<link rel="stylesheet" href="{{ '/static/styles/index.css' | url }}" />
+<link rel="stylesheet" href="{{ '/static/styles/projects-list.css' | url }}" />
+<link rel="stylesheet" href="{{ '/static/styles/project.css' | url }}" />
 
 <section class="description">
-    <article class="row row-1">
-        <p>Делаем проекты такие, такие и ещё такие. Много в общем проектов. Вот тут чуть-чуть, а остальные там.</p>
-        <div class="bg" aria-hidden="true"></div>
-    </article>
-    <article class="row row-2">
-        <div class="bg" aria-hidden="true"></div>
-        <p>Работаем <span class="highlight">7 лет</span>, сделали <span class="highlight">24 проекта</span> для: Мерседес, Нокия, Эппл, Формула 1, Авиасейлс, Азбуки Вкуса и других классных ребят.</p>
-        <div class="bg" aria-hidden="true"></div>
-    </article>
-    <article class="row row-3">
-        <div class="bg" aria-hidden="true"></div>
-        <p>Каждый второй рекомендует нас своим партнёрам.</p>
-    </article>
-    <article class="row row-4">
-        <div class="bg" aria-hidden="true"></div>
-        <p>30% клиентов приглашали нас на другие проекты.</p>
-        <div class="bg" aria-hidden="true"></div>
-    </article>
-    <article class="row row-5">
-        <p>Все клиенты остаются довольны.</p>
-        <div class="bg" aria-hidden="true"></div>
-    </article>
+  <article class="row row-1">
+    <p>
+      Делаем проекты такие, такие и ещё такие. Много в общем проектов. Вот тут
+      чуть-чуть, а остальные там.
+    </p>
+    <div class="bg" aria-hidden="true"></div>
+  </article>
+  <article class="row row-2">
+    <div class="bg" aria-hidden="true"></div>
+    <p>
+      Работаем <span class="highlight">7 лет</span>, сделали
+      <span class="highlight">24 проекта</span> для: Мерседес, Нокия, Эппл,
+      Формула 1, Авиасейлс, Азбуки Вкуса и других классных ребят.
+    </p>
+    <div class="bg" aria-hidden="true"></div>
+  </article>
+  <article class="row row-3">
+    <div class="bg" aria-hidden="true"></div>
+    <p>Каждый второй рекомендует нас своим партнёрам.</p>
+  </article>
+  <article class="row row-4">
+    <div class="bg" aria-hidden="true"></div>
+    <p>30% клиентов приглашали нас на другие проекты.</p>
+    <div class="bg" aria-hidden="true"></div>
+  </article>
+  <article class="row row-5">
+    <p>Все клиенты остаются довольны.</p>
+    <div class="bg" aria-hidden="true"></div>
+  </article>
 </section>
 
 <section class="divider">
-    <span class="highlight">Слова подтверждены делом</span>
+  <span class="highlight">Слова подтверждены делом</span>
 </section>
 
 {% include "components/projects-list.html" %}

@@ -6,11 +6,12 @@ permalink: /partners/index.html
 eleventyNavigation:
   key: partners
   title: Партнёры
+  order: 3
 ---
 
 <h1>Партнёры</h1>
 <ul>
   {%- for partner in collections.partnersList -%}
-    <li><a href="{{ partner | slug | url }}">{{ partner }}</a></li>
+  <li><a href="{{ partner | slug | url }}">{{ partner }}</a></li>
   {%- endfor -%}
 </ul>

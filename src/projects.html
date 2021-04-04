@@ -4,6 +4,7 @@ title: Проекты
 eleventyNavigation:
   key: projects
   title: Проекты
+  order: 2
 ---
 
 <h1>Проекты</h1>
@@ -14,8 +15,11 @@ eleventyNavigation:
     <li>
       <a href="{{ project.url | url}}">{{ project.data.title }}</a>
       <span class="info">
-        <time datetime="{{ project.date }}">{{ project.date | getYear }}</time> • 
-        {{ project.data.period }} работы • для <a href="/partners/{{ project.data.partner | slug }}">{{ project.data.partner }}</a>
+        <time datetime="{{ project.date }}">{{ project.date | getYear }}</time>
+        • {{ project.data.period }} работы • для
+        <a href="/partners/{{ project.data.partner | slug }}"
+          >{{ project.data.partner }}</a
+        >
       </span>
     </li>
     {%- endfor -%}
